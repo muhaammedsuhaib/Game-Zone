@@ -1,0 +1,176 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d0d0d;
+    overflow: hidden;
+}
+
+/* Container for the entire game zone */
+.game-zone {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('GameZone.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay for title positioning */
+.overlay {
+    text-align: center;
+    margin-bottom: auto;
+}
+
+/* Title styling */
+.title h1 {
+    font-size: 4em;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.485);
+    padding: 20px 40px;
+    border-radius: 0px 100px 0px 100px ;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    border: 2px solid #e700ff;
+    position: relative;
+    animation: fadeIn 2s ease-out;
+}
+
+.title h1::before, .title h1::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 0px 10px 0px 10px ;
+    background: #e700ff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title h1::before {
+    left: -40px;
+}
+
+.title h1::after {
+    right: -40px;
+}
+
+/* Container for the button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Button styling */
+.button {
+    background-color: #e700ff;
+    color: #fff;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    animation: bounceIn 2s ease-out;
+}
+
+.button:hover {
+    background-color: #d600e6;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(100px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-10px);
+    }
+    70% {
+        transform: scale(0.95) translateY(5px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1200px) {
+    .title h1 {
+        font-size: 3em;
+        padding: 20px 35px;
+    }
+}
+
+@media (max-width: 992px) {
+    .title h1 {
+        font-size: 2.5em;
+        padding: 15px 30px;
+    }
+
+    .button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 2em;
+        padding: 10px 25px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .title h1 {
+        font-size: 1.5em;
+        padding: 8px 20px;
+    }
+
+    .button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 400px) {
+    .title h1 {
+        font-size: 1.2em;
+        padding: 6px 15px;
+    }
+
+    .button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+}

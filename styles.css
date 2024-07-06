@@ -40,7 +40,8 @@ body {
     text-transform: uppercase;
     border: 2px solid #e700ff;
     position: relative;
-    animation: fadeIn 2s ease-out;
+    margin-top: 200px;
+    animation: fadeIn 2s ease-out ;
 }
 
 .title h1::before, .title h1::after {
@@ -68,8 +69,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: auto;
-    margin-bottom: 20px;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -83,7 +83,7 @@ body {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    animation: bounceIn 2s ease-out;
+    animation: bounceIn 3s ease-out infinite; /* Infinite animation */
 }
 
 .button:hover {
@@ -103,9 +103,9 @@ body {
 }
 
 @keyframes bounceIn {
-    0% {
+    1% {
         opacity: 0;
-        transform: scale(0.3) translateY(100px);
+        transform: scale(2) translateY(100px);
     }
     50% {
         opacity: 1;
